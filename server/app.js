@@ -13,7 +13,8 @@ app.use(express.static(path.join(__dirname,'../client/dist')))
 
 
 app.get('/api/restaurant', (req,res)=>{
-    getInfo((err,data)=>{
+  console.log('req.query, ',req.query.id)
+    getInfo(req.query.id,(err,data)=>{
         if(err){
             console.log(err)
         }else{
@@ -21,5 +22,9 @@ app.get('/api/restaurant', (req,res)=>{
         }
     })
 })
+
+
+
+
 
 module.exports = app;
