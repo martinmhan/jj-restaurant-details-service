@@ -11,16 +11,17 @@
   padding: 10px;
 }
 
-div{
-  /* border: 1px solid black  */
-}
 
 #reservation {
   position:fixed;
   margin-left: 650px;
-  width: 300px;
-  height: 300px;
+  width: 320px;
+  height: 320px;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2)
+}
+
+#reservation div {
+  /* border: 1px solid black;  */
 }
 
 #restitle {
@@ -32,6 +33,118 @@ div{
   border-bottom: 1px solid gainsboro;
   margin-left: 15px;
   margin-right: 15px;
+}
+
+#partysize {
+  font-size: 13px;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 0px;
+}
+
+p {
+  font-size: 13px;
+  font-weight: 600;
+
+}
+
+
+#for {
+  border-bottom: 1px solid gainsboro;
+  padding-bottom: 10px;
+}
+
+#for:hover {
+  padding-bottom: 9px;
+  border-bottom: 2px solid #e60000;
+}
+
+
+#date {
+  margin-top: -5px;
+  display: inline-block;
+  width:42%;
+  margin-left: 15px;
+  border-bottom: 1px solid gainsboro;
+  padding-bottom: 6px;
+}
+
+#time {
+  margin-top: -5px;
+  display: inline-block;
+  width:42%;
+  margin-left: 15px;
+  border-bottom: 1px solid gainsboro;
+  padding-bottom: 6px;
+}
+
+
+#time:hover {
+  padding-bottom: 5px;
+  border-bottom: 2px solid #e60000;
+}
+
+#date:hover {
+  padding-bottom: 5px;
+  border-bottom: 2px solid #e60000;
+}
+
+
+#findtable {
+  border-radius: 2px;
+  background-color:#cc0000;
+  color: white;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top:16px;
+  padding-top:14px;
+  padding-bottom: 14px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#findtabletext {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+
+#booked {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: 15px;
+  margin-top: 20px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+
+
+select {
+  width:90%; 
+  border: none;
+  background-color: white;
+  font-size: 13px;
+  padding: 0px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_keyboard_arrow_down_48px-128.png") no-repeat;
+  background-size: 18px;
+  background-position:  right center;
+}
+
+select:focus {
+  outline:none;
+}
+
+option {
+  background-color: #f1f1f1;
+  width: 100%;
+  
+
 }
 
 #nav {
@@ -52,8 +165,10 @@ div{
 
 
 #nav div:hover {
-  color:#e60000;
+  color:#cc0000;
 }
+
+
 .container{
   display: flex;
   margin-top: 16px;
@@ -66,9 +181,7 @@ div{
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
-  /* border-top: 1px solid gainsboro; */
   border-bottom: 1px solid gainsboro;
-  /* padding-top: 30px; */
   padding-bottom: 30px;
   margin: 15px;
 }
@@ -79,7 +192,7 @@ div{
 }
 
 a {
-  color:#e60000;
+  color:#cc0000;
   text-decoration: none;
 }
 
@@ -120,15 +233,18 @@ a {
 #viewmore {
   height: 300px;;
   position: absolute; 
-  bottom: -320px; 
+  /* bottom: -320px;  */
+  /* bottom:  */
   left: 0;
-  width: 100%; 
+  width: 52%; 
   text-align: center; 
-  margin: 0; 
+  margin-left: 8%;
   padding-top: 80px; 
   padding-bottom:  0px;
   background-image: linear-gradient(transparent ,white,white );
+  border:1px solid gainsboro;
 }
+
 
 
 #viewmore1 {
@@ -137,8 +253,10 @@ a {
 
 #viewtext {
   border: 1px solid gainsboro ;
+  position: relative;
   width: 20%;
-  margin-left: 260px;
+  /* margin-left: 260px; */
+  margin-left: 30%;
   margin-right: auto;
   margin-top: 100px;
   font-size: 16px;
@@ -149,9 +267,10 @@ a {
 
 
 #viewtext:hover {
-  border: 2px solid #e60000;
+  border: 2px solid #cc0000;
   margin-top: 99px;
-  margin-left: 259px;
+  /* margin-left: 259px; */
+  margin-left: 29.8%;
 }
 
 
@@ -176,7 +295,7 @@ a {
 }
 
 #tags div:hover {
-  border: 2px solid #e60000;
+  border: 2px solid #cc0000;
   margin-left: 4px;
   margin-right: 4px;
   text-align: center;
@@ -192,6 +311,5 @@ a {
 
 
 .stars {
-  color: #e60000;
+  color: #cc0000;
 }
-

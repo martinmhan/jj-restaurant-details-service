@@ -14,7 +14,7 @@ class App extends React.Component {
     }
     this.getInfo = this.getInfo.bind(this);
     this.stars = this.stars.bind(this);
-    this.click - this.click.bind(this);
+    this.click = this.click.bind(this);
   }
 
 
@@ -52,6 +52,36 @@ class App extends React.Component {
     this.setState({details: false, viewmore: false})
   }
 
+  partySize(){
+    var node=[];
+    for(var i = 1; i<=20; i++){
+      node.push(<option>{i}</option>)
+    }
+
+    return node
+  }
+
+  timeRender(){
+    let node=[];
+    for(var i=0; i < 24; i++){
+      if(i==0){
+      node.push(<option>{12 + ":" + "00 AM" }</option>)
+      node.push(<option>{12 + ":" + "30 AM"}</option>)
+      }else if(i == 12){
+        node.push(<option>{12 + ":" + "00 PM" }</option>)
+        node.push(<option>{12 + ":" + "30 PM"}</option>)
+      }else if(i < 13){
+        node.push(<option>{i + ":" + "00 AM" }</option>)
+        node.push(<option>{i + ":" + "30 AM"}</option>)
+      }else{
+        node.push(<option>{i-12 + ":" + "00 PM" }</option>)
+        node.push(<option>{i-12 + ":" + "30 PM"}</option>)
+      }
+    }
+
+    return node
+  }
+
 
 
   render(){
@@ -62,6 +92,34 @@ class App extends React.Component {
 
       <div id="reservation">
         <div id="restitle">Make a reservation</div>
+        <div id="partysize">
+          <p>Party Size </p>
+
+          <div id="for">
+            For&nbsp;
+            <select>
+              {this.partySize()}
+            </select>
+
+          </div>
+
+        </div>
+
+
+        <div id="date">
+        <p>Date</p>
+        <select></select>
+        </div>
+
+        <div id="time">
+        <p>Time</p>
+        <select>{this.timeRender()}</select>
+        </div>
+
+
+        <div id="findtable"><div id="findtabletext">Find a table</div></div>
+        <div id="booked"><i className="material-icons">trending_up</i>&nbsp;<div>Booked 134 times today</div></div>
+
 
       </div>
 
@@ -101,7 +159,7 @@ class App extends React.Component {
 
           <div className="container">
           <i className="material-icons">local_dining</i>
-          <div><span className="titles">Cusines</span><br/>{this.state.restaurantInfo[0].cuisines}</div>
+          <div><span className="titles">Cuisines</span><br/>{this.state.restaurantInfo[0].cuisines}</div>
           </div>
 
           
@@ -169,7 +227,7 @@ class App extends React.Component {
 
 
         </div>
-        <div id={viewId}><div id="viewtext" onClick={()=>this.click()}>View all details</div></div>
+        <div id={viewId }className="special" ><div id="viewtext" onClick={()=>this.click()}>View all details</div></div>
 
       </div>
 
