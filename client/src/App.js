@@ -89,21 +89,25 @@ class App extends React.Component {
     let viewId = this.state.viewmore ? "viewmore" : "viewmore1";
   return (
     <div>
+  
+        <div id="reservation">
+          <div id="restitle">Make a reservation</div>
+          <div id="partysize">
+            <p>Party Size </p>
 
-      <div id="reservation">
-        <div id="restitle">Make a reservation</div>
-        <div id="partysize">
-          <p>Party Size </p>
-
-          <div id="for">
-            For&nbsp;
-            <select>
-              {this.partySize()}
-            </select>
-
+            <div id="for">
+              For&nbsp;
+              <select>
+                {this.partySize()}
+              </select>
+            </div>
           </div>
 
-        </div>
+
+
+
+
+
 
 
         <div id="date">
