@@ -1,6 +1,6 @@
 #app {
   width: 52%;
-  /* border: 2px solid black; */
+  border: 2px solid black;
   margin-left: 8%;
   margin-right: auto;
   font-family: sans-serif;
@@ -277,7 +277,6 @@ a {
   /* margin-left: 259px; */
   margin-left: 29.85%;
 }
-
 
 
 
