@@ -81,13 +81,13 @@ class App extends React.Component {
     return (
       <div className={styles.restaurantdetails}>
 
-        <div className={styles.nav}>
+        {/* <div className={styles.nav}>
           <div>Overview</div> 
           <div>Photos</div>
           <div>Menus</div>
           <div>Reviews</div>
           <div>Twitter</div>
-        </div>
+        </div> */}
 
         <div className={styles.name}>{this.state.restaurantInfo[0].name}</div>
 
