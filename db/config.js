@@ -1,6 +1,6 @@
 module.exports = {
   host: 'localhost',
   user: 'root',
-  password: '',
+  password: 'tableIt1!',
   database: 'opentable'
 }
