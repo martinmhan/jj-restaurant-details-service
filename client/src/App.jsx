@@ -20,7 +20,7 @@ class App extends React.Component {
   }
 
   getInfo() {
-    axios.get('http://127.0.0.1:9002/api/restaurant', { params: { id: 2 }})
+    axios.get('http://18.217.79.123:9002/api/restaurant', { params: { id: 2 }})
       .then((data) => {
         this.setState({ restaurantInfo: data.data });
       });
@@ -46,7 +46,7 @@ class App extends React.Component {
   partySize() {
     var node=[];
     for (var i = 1; i <= 20; i++) {
-      node.push(<option>{i}</option>);
+      node.push(<option className={styles.option}>{i}</option>);
     }
 
     return node;
@@ -150,7 +150,7 @@ class App extends React.Component {
               <div className={styles.detailcontainer}>
                 <i className="material-icons">cast</i>
                 <div className={styles.detailtext}>
-                  <span className={styles.titles}>Website</span><br/><a href="https://www.google.com">{this.state.restaurantInfo[0].website}</a>
+                  <span className={styles.titles}>Website</span><br/><a className={styles.a} href="https://www.google.com">{this.state.restaurantInfo[0].website}</a>
                 </div>
               </div>
 
@@ -172,7 +172,7 @@ class App extends React.Component {
                 <i className="material-icons">place</i>
                 <div className={styles.detailtext}>
                   <span className={styles.titles}>Address</span><br/>
-                  <a href="https://www.google.com">{this.state.restaurantInfo[0].address}</a>
+                  <a className={styles.a} href="https://www.google.com">{this.state.restaurantInfo[0].address}</a>
                 </div>
               </div>
 
