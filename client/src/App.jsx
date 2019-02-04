@@ -20,10 +20,9 @@ class App extends React.Component {
   }
 
   getInfo() {
-    axios.get('http://3.83.40.199:9000/api/restaurant', { params: { id: 2 }})
-      .then((data) => {
-        this.setState({ restaurantInfo: data.data });
-      });
+    axios.get('http://3.84.195.96:9000/api/restaurant', { params: { id: 2 } })
+      .then((data) => { this.setState({ restaurantInfo: data.data }); })
+      .catch((err) => { console.error(err); });
   }
 
   stars(a) {
